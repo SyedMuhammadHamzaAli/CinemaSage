@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>PlotBot</title>
+	<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="chat-container">
+        <div class="header">
+            <h1>CinemaSage: A Movie Summary Q&A System</h1>
+        </div>
+        <div class="chat-messages" id="chat-messages">
+            <!-- Chat history will be displayed here -->
+        </div>
+        <div class="chat-input-container">
+            <form class="chat-input-form" action="/" method="post">
+                <input type="text" id="user-input-field" name="question" placeholder="Type a question...">
+                <button id="send-button">Send</button>
+            </form>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html> 
