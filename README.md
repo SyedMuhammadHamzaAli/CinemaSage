@@ -23,6 +23,8 @@ Download Dataset From The [CMU Website](https://www.cs.cmu.edu/~ark/personas/)
 # User Interface
 The user interface is developed with Flask and JavaScript to provide a smooth, interactive experience for querying movie details.
 ![Alt Text](Images/img1.png)
+![Alt Text](Images/img2.png)
+![Alt Text](Images/img3.png)
 # Conclusion
 CinemaSage makes exploring movie details fast and efficient by leveraging modern NLP technologies, providing users with accurate and relevant answers in a conversational format.
 
