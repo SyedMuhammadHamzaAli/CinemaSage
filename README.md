@@ -22,6 +22,7 @@ Download Dataset From The [CMU Website](https://www.cs.cmu.edu/~ark/personas/)
 2) Embedding: Employed Sentence Transformers and OpenAI Embeddings for efficient text processing.
 # User Interface
 The user interface is developed with Flask and JavaScript to provide a smooth, interactive experience for querying movie details.
+![Alt Text](Images/img1.png)
 # Conclusion
 CinemaSage makes exploring movie details fast and efficient by leveraging modern NLP technologies, providing users with accurate and relevant answers in a conversational format.
 
