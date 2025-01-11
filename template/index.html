@@ -1,26 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>PlotBot</title>
-	<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CinemaSage</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .chat-container {
+            background: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 400px;
+            max-width: 90%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            border-radius: 10px 10px 0 0;
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+
+        .chat-messages {
+            padding: 15px;
+            height: 300px;
+            overflow-y: auto;
+            border-bottom: 1px solid #eee;
+        }
+
+        .chat-input-container {
+            display: flex;
+            padding: 10px;
+            background-color: #f9f9f9;
+            border-radius: 0 0 10px 10px;
+        }
+
+        .chat-input-form {
+            display: flex;
+            width: 100%;
+        }
+
+        #user-input-field {
+            flex: 1;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+            margin-right: 10px;
+            outline: none;
+            transition: border-color 0.3s;
+        }
+
+        #user-input-field:focus {
+            border-color: #4CAF50;
+        }
+
+        #send-button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 15px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: background-color 0.3s;
+        }
+
+        #send-button:hover {
+            background-color: #45a049;
+        }
+    </style>
 </head>
 <body>
     <div class="chat-container">
         <div class="header">
-            <h1>CinemaSage: A Movie Summary Q&A System</h1>
+            <h1>CinemaSage</h1>
+            <p>Discover, Learn, and Enjoy Movie Insights</p>
         </div>
         <div class="chat-messages" id="chat-messages">
             <!-- Chat history will be displayed here -->
         </div>
         <div class="chat-input-container">
             <form class="chat-input-form" action="/" method="post">
-                <input type="text" id="user-input-field" name="question" placeholder="Type a question...">
-                <button id="send-button">Send</button>
+                <input type="text" id="user-input-field" name="question" placeholder="Ask about any movie...">
+                <button id="send-button" type="submit">Send</button>
             </form>
         </div>
     </div>
     <script src="{{ url_for('static', filename='js/script.js') }}"></script>
 </body>
-</html> 
+</html>
